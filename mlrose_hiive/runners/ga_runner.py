@@ -16,9 +16,9 @@ Example usage:
                   max_attempts=1000,
                   population_sizes=[150, 200, 300],
                   mutation_rates=[0.4, 0.5, 0.6])
-                  
+
     # the two data frames will contain the results
-    df_run_stats, df_run_curves = ga.run()                  
+    df_run_stats, df_run_curves = ga.run()
 """
 
 
@@ -37,11 +37,10 @@ class GARunner(_RunnerBase):
 
     def run(self):
         return super().run_experiment_(algorithm=mlrose_hiive.genetic_alg,
-                                       pop_size=('Population Size', self.population_sizes),
-                                       mutation_prob=('Mutation Rate', self.mutation_rates),
-                                       hamming_factor=('Hamming Factor', self.hamming_factors),
+                                       pop_size=('Population Size',
+                                                 self.population_sizes),
+                                       mutation_prob=(
+                                           'Mutation Rate', self.mutation_rates),
+                                       hamming_factor=(
+                                           'Hamming Factor', self.hamming_factors),
                                        hamming_decay_factor=('Hamming Factor Decay Rate', self.hamming_factor_decays))
-
-
-
-
