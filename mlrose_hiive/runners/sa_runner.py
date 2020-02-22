@@ -49,7 +49,5 @@ class SARunner(_RunnerBase):
                         for d in self.temperature_decay_list
                         for decay in self.decay_list]
         return super().run_experiment_(algorithm=mlrose_hiive.simulated_annealing,
-                                       temperature=(
-                                           'Temperature', self.temperature_list),
-                                       decay=('Temperature Decay',
-                                              self.temperature_decay_list))
+                                       schedule=(
+                                           'Temperature', temperatures))
