@@ -42,7 +42,7 @@ pip install git+https://github.com/alsonyap/mlrose.git@master
 Or, for pipenv installation,
 
 ```
-pipenv install git+https://github.com/alsonyap/mlrose.git@master#egg=mlrose
+pipenv install -e git+https://github.com/alsonyap/mlrose.git@master#egg=mlrose
 ```
 
 ## Documentation
